@@ -21,6 +21,7 @@ appointmentsRouter.post('/', async (request, response) => {
   const { provider_id, date } = request.body;
 
   const parsedDate = parseISO(date);
+  console.log(typeof parsedDate);
 
   const createAppointment = new CreateAppointmentService();
 
